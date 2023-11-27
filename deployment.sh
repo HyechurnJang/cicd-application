@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pip install --no-cache-dir fastapi uvicorn aiohttp asyncio requests psycopg psycopg-binary
+pip install --no-cache-dir fastapi uvicorn aiohttp asyncio requests psycopg psycopg-binary 2>&1 > /dev/null
 
 if [ ! -f "/lib/systemd/system/fapi.service" ]; then
 	sudo -i cp /opt/cicd/src/files/fapi.service /lib/systemd/system/fapi.service
