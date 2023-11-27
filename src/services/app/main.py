@@ -20,7 +20,7 @@ def handler(module):
     uvicorn.run(
         'routes:app',
         host='0.0.0.0',
-        port=int(config['application']['hostport']),
+        port=int(config['service']['hostport']),
         reload=True,
         reload_dirs=[f'services/{module}']
     )

@@ -32,11 +32,11 @@ class View:
     
     async def startup(self):
         self.db = await Table.initialize(
-            self.config['application']['db_writer_ip'], # hostname
-            self.config['application']['db_hostport'], # hostport
-            self.config['application']['db_database'], # database
-            self.config['application']['db_username'], # username
-            self.config['application']['db_password'], # password
+            self.config['service']['db_writer_ip'], # hostname
+            self.config['service']['db_hostport'], # hostport
+            self.config['service']['db_database'], # database
+            self.config['service']['db_username'], # username
+            self.config['service']['db_password'], # password
             'message', # table
             [
                 ('id', 'pkey-default'),
