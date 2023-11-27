@@ -1,0 +1,12 @@
+[Unit]
+Description=Fast Api Application Server
+After=network.target auditd.service
+
+[Service]
+WorkingDirectory=/opt/cicd/src/
+ExecStart=python3 server.py -m app
+Restart=on-failure
+User=cicd
+
+[Install]
+WantedBy=multi-user.service
