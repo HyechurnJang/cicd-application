@@ -21,7 +21,7 @@ from views import View
 #===============================================================================
 # SingleTone
 #===============================================================================
-config = getConfig('../deployment.conf')
+config = getConfig('../deployment.ini')
 Logger.register(config)
 app = FastAPI(title='App Module')
 view = View(config)

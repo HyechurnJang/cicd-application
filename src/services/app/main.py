@@ -15,7 +15,7 @@ from common import getConfig
 
 
 def handler(module):
-    config = getConfig('../deployment.conf')
+    config = getConfig('../deployment.ini')
     
     uvicorn.run(
         'routes:app',
