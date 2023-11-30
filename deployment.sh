@@ -9,8 +9,8 @@ workspace=$default_workspace
 pip install --no-cache-dir fastapi uvicorn aiohttp asyncio requests psycopg psycopg-binary 2>&1 > /dev/null
 
 if [ ! -f "/lib/systemd/system/fapi.service" ]; then
-	sudo -i cp $workspace/src/files/fapi.service /lib/systemd/system/fapi.service
-	sudo -i systemctl enable fapi.service
+	sudo cp $workspace/src/files/fapi.service /lib/systemd/system/fapi.service
+	sudo systemctl enable fapi.service
 fi
 
-sudo -i systemctl restart fapi.service
+sudo systemctl restart fapi.service
